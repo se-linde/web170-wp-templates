@@ -1,28 +1,15 @@
-<HEAD
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 
 <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?> | Seattle, WA. </title>
-=======
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>MAIN.html</title>
->>>>>>> origin/master
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link href='https://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
 
-<<<<<<< HEAD
 <link rel="stylesheet"  href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all"/>
 
 <?php wp_head(); ?>    
-=======
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-    
->>>>>>> origin/master
 </head>
 <body <?php body_class();?>        
     
@@ -70,20 +57,12 @@
 <!-- Main Content --> 
     
      <!-- <h2 class="pageid">Home Page</h2> -->
-<<<<<<< HEAD
  <div id="content">
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
 <h2><a href="<?php the_permalink(); // link to the page or posting ?>"><?php the_title(); // get the page or posting title ?></a></h2>
 <?php the_content(''); // get page or posting written content ?>
 <?php endwhile; endif; // end the loop ?>
-=======
- <article class="chapterOne">
- <h1>About Cornerstone Consulting</h1>
-<section class="secOne">	       
- <img src="images/aimee_headshot_sm.gif">
-    <p>Aimee Elber, Manager of Disability Support Services at Spokane Community College, holds over a decade of experience in higher education and has worked with people with disabilities since 1994. As a first generation college graduate, Aimee started her academic career in the community college system and completed her Bachelor of Arts degree in Human Services at Western Washington University. She is driven by a deep desire to help students meet their academic and occupational goals.</p>
->>>>>>> origin/master
     
 </div>     
 
@@ -101,32 +80,8 @@
 
 <!-- content ends --> 
 
-<<<<<<< HEAD
 
 <!-- footer starts -->     
-=======
-<pre><code>
-#header h1 a { 
-	display: block; 
-	width: 300px; 
-	height: 80px; 
-}
-</code></pre>
-</section>
-</article>
-<!-- END Article (Chapter) --> 
-    
-    <!-- START Aside -->
-<aside>
-  <h2>'Who will Riddle me the How and the Why?'</h2>
-    <p>So questions one of England's sweetest singers. The `How?' has already been told, after a fashion, in the verses prefixed to Alice in Wonderland ; and some other memories of that happy summer day are set down, for those who care to see them, in this little book--the germ that was to grow into the published volume. But the `Why?' cannot, and need not, be put into words. Those for whom a child's mind is a sealed book, and who see no divinity in a child's smile, would read such words in vain: while for any one that has ever loved one true child</p>
-    
-  <p class="author">Lewis Carroll December, 1886</p>
-</aside>
-<!-- END Aside -->
-    
-    
->>>>>>> origin/master
     
 <footer>
     <small>
