@@ -1,27 +1,21 @@
-
-<!-- From: https://css-tricks.com/targetting-menu-elements-submenus-navigation-bar/ -->
-
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-<title>about.html</title>
+
+<title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?> | Seattle, WA. </title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link href='https://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
-    
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
+<link rel="stylesheet"  href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all"/>
 
-
-
-    
+<?php wp_head(); ?>    
 </head>
+<body <?php body_class();?>        
     
 <body>
 <header> 
-    <img src="images/cornerstone_placeholder.gif" class="icon" alt="A placeholder cornerstone image. Labeled for reuse." />
+    <img src="<?php bloginfo('template_directory'); ?> /images/cornerstone_placeholder.gif" class="icon" alt="A placeholder cornerstone image. Labeled for reuse." />
     
     <!--<img src="icons/Logo-Black-41px-TM.png" class="social" alt="LinkedIn link icon" />-->
     
@@ -32,7 +26,7 @@
     
     
     <a href="mailto:example@example.com ">
-    <img src="icons/email.png" class="email" alt="Email link icon." />
+    <img src="<?php bloginfo('template_directory'); ?> /icons/email.png" class="email" alt="Email link icon." />
     </a>
         
      
@@ -58,38 +52,36 @@
     <li><a href="http://www.lindese.com/web170/bones-template/contact.html" target="_blank">Contact</a></li>
   </ul>
 </nav>
+    <!-- end header --> 
+
+<!-- Main Content --> 
     
      <!-- <h2 class="pageid">Home Page</h2> -->
- 
-    <img src="images/aimee_headshot_sm.gif">
+ <div id="content">
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
+<h2><a href="<?php the_permalink(); // link to the page or posting ?>"><?php the_title(); // get the page or posting title ?></a></h2>
+<?php the_content(''); // get page or posting written content ?>
+<?php endwhile; endif; // end the loop ?>
     
-    <h1>About Cornerstone Consulting</h1>
-	       
-<p>Aimee Elber, Manager of Disability Support Services at Spokane Community College, holds over a decade of experience in higher education and has worked with people with disabilities since 1994. As a first generation college graduate, Aimee started her academic career in the community college system and completed her Bachelor of Arts degree in Human Services at Western Washington University. She is driven by a deep desire to help students meet their academic and occupational goals.</p>
+</div>     
+
+
+    <!-- START Aside -->
+<aside>
+  <h2>'Who will Riddle me the How and the Why?'</h2>
+    <p>So questions one of England's sweetest singers. The `How?' has already been told, after a fashion, in the verses prefixed to Alice in Wonderland ; and some other memories of that happy summer day are set down, for those who care to see them, in this little book--the germ that was to grow into the published volume. But the `Why?' cannot, and need not, be put into words. Those for whom a child's mind is a sealed book, and who see no divinity in a child's smile, would read such words in vain: while for any one that has ever loved one true child</p>
     
-    <p>While pursuing her college education, Aimee began her career with the Washington State Division of Vocational Rehabilitation (DVR) as a Governor’s Intern and was later hired as a Rehabilitation Technician. Working with DVR inspired her to seek out opportunities to help people with disabilities successfully enter the workforce. Building on her experience, she worked as a Career Counselor and Academic Advisor at Lake Washington Technical College and later sought employment as a Disability Services Specialist in the Seattle Community Colleges District. She then transitioned to a job in Workforce Education to supplement her existing skills. Aimee served as Assistant Director of Student Services at Pacific Northwest College of Art in Portland, Oregon and later as Coordinator of Disability Services at Clackamas Community College. </p>
-      
-    <p>Aimee adheres to a strengths-based “person first” philosophy, viewing individuals holistically and focusing on assets rather than barriers. She is committed to diversity, multiculturalism, and fostering a safe learning environment. Working with people in a variety of roles has allowed Aimee the opportunity to help individuals become empowered advocates for themselves and their education.</p>
-      
-    <p>Aimee brings a diverse skill set to the table including a broad knowledge base surrounding ADA compliance, Universal Design, Career Counseling theory, Appreciative Inquiry, Veteran’s Services, and Workforce Education. She is proficient in American Sign Language, trained as a Dependable Strengths Level I Facilitator, and certified to administer and interpret the Myers-Briggs Type Indicator.  She is currently pursuing her Master’s degree with a focus in Organizational Leadership.</p>  
+  <p class="author">Lewis Carroll December, 1886</p>
+</aside>
+<!-- END Aside -->
+         
 
 
+<!-- content ends --> 
 
-<h3>Header Level 3</h3>
 
-<ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ul>
-
-<pre><code>
-#header h1 a { 
-	display: block; 
-	width: 300px; 
-	height: 80px; 
-}
-</code></pre>
-    
+<!-- footer starts -->     
     
 <footer>
     <small>
@@ -98,5 +90,6 @@
         <a href="disclaimer.html">Legal Disclaimer</a>
     </small>
 </footer>
+<?php wp_footer(); ?>    
 </body>
 </html>

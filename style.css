@@ -35,7 +35,7 @@ Version: 0.0.01
         border-top: 2px solid #000;
 	}
 	
-	h1,h2,h3,h4,h5,h6 {
+	h1,h2,h3,h4,h5,h6 small {
 		font-weight:normal;
         
 	}
