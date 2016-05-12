@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 
@@ -59,10 +59,10 @@
      <!-- <h2 class="pageid">Home Page</h2> -->
  <div id="content">
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
-<h2><a href="<?php the_permalink(); // link to the page or posting ?>"><?php the_title(); // get the page or posting title ?></a></h2>
-<?php the_content(''); // get page or posting written content ?>
-<?php endwhile; endif; // end the loop ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<h2><a href="<?php the_permalink();  ?>"><?php the_title();  ?></a></h2>
+<?php the_content('');  ?>
+<?php endwhile; endif;  ?>
     
 </div>     
 
@@ -72,7 +72,7 @@
   <h2>'Who will Riddle me the How and the Why?'</h2>
     <p>So questions one of England's sweetest singers. The `How?' has already been told, after a fashion, in the verses prefixed to Alice in Wonderland ; and some other memories of that happy summer day are set down, for those who care to see them, in this little book--the germ that was to grow into the published volume. But the `Why?' cannot, and need not, be put into words. Those for whom a child's mind is a sealed book, and who see no divinity in a child's smile, would read such words in vain: while for any one that has ever loved one true child</p>
     
-  <p class="author">Lewis Carroll December, 1886</p>
+  <p class="author">Lewis Carroll December, 1886. index.php</p>
 </aside>
 <!-- END Aside -->
          
